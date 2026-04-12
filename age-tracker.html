@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متابعة العمر والنمو | MIAW</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/age-tracker.css">
+</head>
+<body style="padding-top: 30px;">
+
+    <div class="container fade-up visible">
+
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-right"></i> العودة للرئيسية
+        </a>
+
+        <header class="page-header">
+            <div class="section-label">متابعة النمو</div>
+            <h1 class="section-title">متابعة العمر <em>والنمو</em></h1>
+            <p class="section-desc">أدخلي تاريخ ميلاد قطتك واكتشفي مرحلتها العمرية واحتياجاتها.</p>
+        </header>
+
+        <div class="age-layout">
+
+            <div class="calc-box">
+                <h3 class="calc-title">بيانات قطتك</h3>
+
+                <div class="form-group">
+                    <label class="form-label">اسم القطة</label>
+                    <input type="text" class="form-input" id="cat-name" placeholder="مثال: لولو">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">تاريخ الميلاد</label>
+                    <input type="date" class="form-input" id="cat-birthdate">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">الجنس</label>
+                    <select class="form-select" id="cat-gender">
+                        <option value="female">أنثى</option>
+                        <option value="male">ذكر</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">السلالة</label>
+                    <select class="form-select" id="cat-breed">
+                        <option value="mixed">هجين (مشكّل)</option>
+                        <option value="persian">فارسي</option>
+                        <option value="siamese">سيامي</option>
+                        <option value="british">بريطاني قصير الشعر</option>
+                        <option value="maine">مين كون</option>
+                        <option value="other">أخرى</option>
+                    </select>
+                </div>
+
+                <button class="calc-btn" onclick="calculateAge()">
+                    <i class="fas fa-birthday-cake"></i> احسبي العمر
+                </button>
+
+                <div id="age-error" class="error-msg">رجاءً أدخلي تاريخ الميلاد على الأقل</div>
+            </div>
+
+            <div class="age-result-box" id="age-result-box">
+                <div class="age-placeholder">
+                    <i class="fas fa-cat"></i>
+                    <p>أدخلي بيانات قطتك<br>لتعرفي مرحلتها العمرية</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="stages-section">
+            <div class="section-label">المراحل العمرية</div>
+            <h2 class="section-title">كل مرحلة ولها احتياجاتها</h2>
+
+            <div class="stages-grid">
+
+                <div class="stage-card">
+                    <div class="stage-icon"><i class="fas fa-star"></i></div>
+                    <div class="stage-age">٠ — ٦ أشهر</div>
+                    <h3>القطة الرضيعة</h3>
+                    <ul class="stage-list">
+                        <li>حليب الأم أو بديله حتى الفطام</li>
+                        <li>التطعيمات الأولى تبدأ من الأسبوع الثامن</li>
+                        <li>التنشئة الاجتماعية مهمة جداً في هذه المرحلة</li>
+                        <li>فحص بيطري كل شهر</li>
+                    </ul>
+                </div>
+
+                <div class="stage-card">
+                    <div class="stage-icon"><i class="fas fa-running"></i></div>
+                    <div class="stage-age">٦ أشهر — سنة</div>
+                    <h3>القطة الناشئة</h3>
+                    <ul class="stage-list">
+                        <li>طعام خاص بالقطط الصغيرة عالي البروتين</li>
+                        <li>التعقيم يُنصح به في هذه المرحلة</li>
+                        <li>لعب نشط يومياً لتفريغ الطاقة</li>
+                        <li>تدريب على صندوق الرمل</li>
+                    </ul>
+                </div>
+
+                <div class="stage-card active-stage">
+                    <div class="stage-icon"><i class="fas fa-heart"></i></div>
+                    <div class="stage-age">١ — ٧ سنوات</div>
+                    <h3>القطة البالغة</h3>
+                    <ul class="stage-list">
+                        <li>وجبتان يومياً بكميات منتظمة</li>
+                        <li>فحص بيطري سنوي</li>
+                        <li>تنظيف الأسنان بانتظام</li>
+                        <li>نشاط بدني معتدل يومياً</li>
+                    </ul>
+                </div>
+
+                <div class="stage-card">
+                    <div class="stage-icon"><i class="fas fa-moon"></i></div>
+                    <div class="stage-age">٧ — ١٠ سنوات</div>
+                    <h3>القطة الناضجة</h3>
+                    <ul class="stage-list">
+                        <li>مراقبة الوزن بدقة أكبر</li>
+                        <li>فحوصات دم دورية</li>
+                        <li>طعام مخصص للقطط الناضجة</li>
+                        <li>الانتباه لأي تغير في السلوك</li>
+                    </ul>
+                </div>
+
+                <div class="stage-card">
+                    <div class="stage-icon"><i class="fas fa-leaf"></i></div>
+                    <div class="stage-age">١٠+ سنوات</div>
+                    <h3>القطة الكبيرة</h3>
+                    <ul class="stage-list">
+                        <li>طعام خاص بكبار القطط قليل الفوسفور</li>
+                        <li>فحص بيطري كل ٦ أشهر</li>
+                        <li>مراقبة الكلى والغدة الدرقية</li>
+                        <li>بيئة مريحة ودافئة</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="human-age-section">
+            <div class="section-label">معلومة مثيرة</div>
+            <h2 class="section-title">عمر قطتك بالسنوات البشرية</h2>
+            <p class="section-desc">هل تعلمتِ أن سنة القطة الأولى تعادل ١٥ سنة بشرية؟</p>
+
+            <div class="human-age-grid">
+                <div class="human-age-card">
+                    <span class="cat-age-num">١ سنة</span>
+                    <i class="fas fa-equals"></i>
+                    <span class="human-age-num">١٥ سنة</span>
+                </div>
+                <div class="human-age-card">
+                    <span class="cat-age-num">٢ سنة</span>
+                    <i class="fas fa-equals"></i>
+                    <span class="human-age-num">٢٤ سنة</span>
+                </div>
+                <div class="human-age-card">
+                    <span class="cat-age-num">٥ سنوات</span>
+                    <i class="fas fa-equals"></i>
+                    <span class="human-age-num">٣٦ سنة</span>
+                </div>
+                <div class="human-age-card">
+                    <span class="cat-age-num">١٠ سنوات</span>
+                    <i class="fas fa-equals"></i>
+                    <span class="human-age-num">٥٦ سنة</span>
+                </div>
+                <div class="human-age-card">
+                    <span class="cat-age-num">١٥ سنة</span>
+                    <i class="fas fa-equals"></i>
+                    <span class="human-age-num">٧٦ سنة</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function calculateAge() {
+            const birthdate = document.getElementById('cat-birthdate').value;
+            const name      = document.getElementById('cat-name').value.trim() || 'قطتك';
+            const errorEl   = document.getElementById('age-error');
+            const resultBox = document.getElementById('age-result-box');
+
+            if (!birthdate) {
+                errorEl.style.display = 'block';
+                return;
+            }
+            errorEl.style.display = 'none';
+
+            const birth  = new Date(birthdate + 'T00:00:00');
+            const now    = new Date();
+            const diffMs = now - birth;
+
+            if (diffMs < 0) {
+                errorEl.textContent = 'تاريخ الميلاد لا يمكن أن يكون في المستقبل';
+                errorEl.style.display = 'block';
+                return;
+            }
+
+            const totalDays   = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+            const years       = Math.floor(totalDays / 365);
+            const months      = Math.floor((totalDays % 365) / 30);
+            const days        = totalDays % 30;
+            const humanAge    = toHumanAge(years, months);
+            const stage       = getStage(years, months);
+            const nextStage   = getNextStage(years, months);
+
+            resultBox.innerHTML = `
+                <div class="result-header">
+                    <div class="result-icon">${stage.icon}</div>
+                    <div>
+                        <h3 class="result-name">${name}</h3>
+                        <span class="result-stage-badge" style="background:${stage.color}20; color:${stage.color}; border:1px solid ${stage.color}40;">
+                            ${stage.label}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="result-ages">
+                    <div class="age-box">
+                        <span class="age-box-num">${years > 0 ? years + ' سنة' : ''} ${months > 0 ? months + ' شهر' : ''} ${years === 0 && months === 0 ? days + ' يوم' : ''}</span>
+                        <span class="age-box-label">العمر الحقيقي</span>
+                    </div>
+                    <div class="age-divider"><i class="fas fa-exchange-alt"></i></div>
+                    <div class="age-box">
+                        <span class="age-box-num">${humanAge} سنة</span>
+                        <span class="age-box-label">بالسنوات البشرية</span>
+                    </div>
+                </div>
+
+                <div class="result-tips">
+                    <div class="result-tips-title"><i class="fas fa-lightbulb"></i> احتياجات هذه المرحلة</div>
+                    <ul>
+                        ${stage.tips.map(t => `<li>${t}</li>`).join('')}
+                    </ul>
+                </div>
+
+                ${nextStage ? `
+                <div class="next-stage">
+                    <i class="fas fa-arrow-left"></i>
+                    المرحلة القادمة: <strong>${nextStage}</strong>
+                </div>` : `
+                <div class="next-stage">
+                    <i class="fas fa-crown"></i>
+                    قطتك في أعلى مراحل العمر — اعتني بها جيداً
+                </div>`}
+            `;
+        }
+
+        function toHumanAge(years, months) {
+            const totalMonths = years * 12 + months;
+            if (totalMonths <= 6)  return Math.round(totalMonths * 2.5);
+            if (totalMonths <= 12) return Math.round(15 + (totalMonths - 6) * 1.5);
+            if (years <= 2)        return Math.round(15 + (totalMonths - 6) * 1.5);
+            return Math.round(24 + (years - 2) * 4);
+        }
+
+        function getStage(years, months) {
+            const totalMonths = years * 12 + months;
+            if (totalMonths < 6)   return { label: 'رضيعة',  icon: '🍼', color: '#ddbea9', tips: ['حليب الأم أو بديله', 'التطعيمات الأولى', 'التنشئة الاجتماعية', 'فحص شهري'] };
+            if (totalMonths < 12)  return { label: 'ناشئة',  icon: '⚡', color: '#b7b7a4', tips: ['طعام عالي البروتين', 'التعقيم في هذه المرحلة', 'لعب نشط يومي', 'تدريب على صندوق الرمل'] };
+            if (years < 7)         return { label: 'بالغة',  icon: '❤️', color: '#a5a58d', tips: ['وجبتان يومياً منتظمتان', 'فحص بيطري سنوي', 'تنظيف الأسنان', 'نشاط بدني معتدل'] };
+            if (years < 10)        return { label: 'ناضجة',  icon: '🌙', color: '#b7b7a4', tips: ['مراقبة الوزن بدقة', 'فحوصات دم دورية', 'طعام للقطط الناضجة', 'الانتباه لتغير السلوك'] };
+            return                         { label: 'كبيرة',  icon: '🍃', color: '#ddbea9', tips: ['طعام قليل الفوسفور', 'فحص كل ٦ أشهر', 'مراقبة الكلى والغدة الدرقية', 'بيئة دافئة ومريحة'] };
+        }
+
+        function getNextStage(years, months) {
+            const totalMonths = years * 12 + months;
+            if (totalMonths < 6)  return 'القطة الناشئة (٦ أشهر)';
+            if (totalMonths < 12) return 'القطة البالغة (سنة)';
+            if (years < 7)        return 'القطة الناضجة (٧ سنوات)';
+            if (years < 10)       return 'القطة الكبيرة (١٠ سنوات)';
+            return null;
+        }
+    </script>
+
+</body>
+</html>

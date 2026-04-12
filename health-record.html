@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السجل الصحي | MIAW</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="padding-top: 30px;">
+
+    <div class="container fade-up visible">
+
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-right"></i> العودة للرئيسية
+        </a>
+
+        <header class="page-header">
+            <div class="section-label">ملف طبي</div>
+            <h1 class="section-title">السجل <em>الصحي</em></h1>
+            <p class="section-desc">تابعي الحالة الصحية لقطتك وسجلي كل التفاصيل الطبية بدقة.</p>
+        </header>
+
+        <div class="record-layout">
+
+            <div class="calc-box">
+                <h3 class="calc-title">إضافة سجل جديد</h3>
+
+                <div class="form-group">
+                    <label class="form-label">التاريخ</label>
+                    <input type="date" class="form-input" id="rec-date">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">نوع الإجراء</label>
+                    <select class="form-select" id="rec-type">
+                        <option value="vaccine">تطعيم دوري</option>
+                        <option value="checkup">فحص عام</option>
+                        <option value="dental">تنظيف أسنان</option>
+                        <option value="emergency">طوارئ</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">عنوان الإجراء</label>
+                    <input type="text" class="form-input" id="rec-title" placeholder="مثال: تطعيم الثلاثي">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">الملاحظات</label>
+                    <textarea class="form-input contact-textarea" id="rec-notes" placeholder="اكتبي أي ملاحظات طبية هنا..."></textarea>
+                </div>
+
+                <button class="calc-btn" onclick="addRecord()">
+                    <i class="fas fa-plus"></i> حفظ السجل
+                </button>
+
+                <div id="success-msg" class="success-msg">
+                    <i class="fas fa-check-circle"></i> تم حفظ السجل بنجاح
+                </div>
+            </div>
+
+            <div class="history-box">
+                <div class="history-header">
+                    <h3 class="calc-title" style="margin-bottom: 0;">تاريخ السجلات</h3>
+                    <span class="records-count" id="records-count">0 سجل</span>
+                </div>
+
+                <div class="timeline" id="timeline"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const typeLabels = {
+            vaccine:   { label: 'تطعيم دوري', cls: 'badge-vaccine'   },
+            checkup:   { label: 'فحص عام',     cls: 'badge-checkup'   },
+            dental:    { label: 'تنظيف أسنان', cls: 'badge-dental'    },
+            emergency: { label: 'طوارئ',        cls: 'badge-emergency' }
+        };
+
+        function formatDate(val) {
+            if (!val) return '';
+            const d = new Date(val + 'T00:00:00');
+            return d.toLocaleDateString('ar-SA', { year: 'numeric', month: 'long', day: 'numeric' });
+        }
+
+        function loadRecords() {
+            return JSON.parse(localStorage.getItem('miaw-health-records') || '[]');
+        }
+
+        function saveRecords(records) {
+            localStorage.setItem('miaw-health-records', JSON.stringify(records));
+        }
+
+        function renderAll() {
+            const records  = loadRecords();
+            const timeline = document.getElementById('timeline');
+            const countEl  = document.getElementById('records-count');
+
+            countEl.textContent = records.length + ' سجل';
+            timeline.innerHTML  = '';
+
+            if (records.length === 0) {
+                timeline.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-notes-medical"></i>
+                        <p>لا توجد سجلات بعد<br>ابدئي بإضافة أول سجل لقطتك</p>
+                    </div>`;
+                return;
+            }
+
+            records.forEach((rec, index) => {
+                const info = typeLabels[rec.type] || typeLabels.checkup;
+                const item = document.createElement('div');
+                item.className = 'timeline-item';
+                item.innerHTML = `
+                    <div class="timeline-item-header">
+                        <span class="timeline-badge ${info.cls}">${info.label}</span>
+                        <button class="delete-btn" onclick="deleteRecord(${index})" title="حذف">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                    <span class="date">${formatDate(rec.date)}</span>
+                    <h4>${rec.title}</h4>
+                    ${rec.notes ? `<p>${rec.notes}</p>` : ''}
+                `;
+                timeline.appendChild(item);
+            });
+        }
+
+        function addRecord() {
+            const date  = document.getElementById('rec-date').value;
+            const type  = document.getElementById('rec-type').value;
+            const title = document.getElementById('rec-title').value.trim();
+            const notes = document.getElementById('rec-notes').value.trim();
+
+            if (!date || !title) {
+                alert('رجاءً أدخلي التاريخ والعنوان على الأقل');
+                return;
+            }
+
+            const records = loadRecords();
+            records.unshift({ date, type, title, notes });
+            saveRecords(records);
+            renderAll();
+
+            document.getElementById('rec-date').value  = '';
+            document.getElementById('rec-title').value = '';
+            document.getElementById('rec-notes').value = '';
+
+            const msg = document.getElementById('success-msg');
+            msg.classList.add('show');
+            setTimeout(() => msg.classList.remove('show'), 3000);
+        }
+
+        function deleteRecord(index) {
+            if (!confirm('هل تريدين حذف هذا السجل؟')) return;
+            const records = loadRecords();
+            records.splice(index, 1);
+            saveRecords(records);
+            renderAll();
+        }
+
+        renderAll();
+    </script>
+
+</body>
+</html>
