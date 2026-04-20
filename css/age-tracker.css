@@ -7,19 +7,19 @@
 }
 
 .age-result-box {
-    background: var(--green-deep);
-    border: 1px solid var(--glass-border);
+    background: var(--white);
+    border: 1px solid var(--border-soft);
     border-radius: 28px;
     padding: 40px;
     min-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: var(--shadow);
 }
 
 .age-placeholder {
     text-align: center;
-    color: rgba(255,255,255,0.2);
     padding: 40px 20px;
 }
 
@@ -27,13 +27,14 @@
     font-size: 3rem;
     display: block;
     margin-bottom: 16px;
-    color: rgba(255,255,255,0.15);
+    color: var(--accent);
+    opacity: 0.3;
 }
 
 .age-placeholder p {
     font-size: 0.9rem;
     line-height: 1.8;
-    color: rgba(255,255,255,0.2);
+    color: var(--text-muted);
 }
 
 .result-header {
@@ -44,20 +45,26 @@
 }
 
 .result-icon {
-    font-size: 2.5rem;
     width: 64px;
     height: 64px;
-    background: var(--glass);
+    background: rgba(144,171,139,0.15);
     border-radius: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid var(--border);
+}
+
+.result-icon i {
+    font-size: 1.8rem;
+    color: var(--accent-dark);
 }
 
 .result-name {
     font-size: 1.4rem;
     font-weight: 900;
     margin-bottom: 8px;
+    color: var(--text-main);
 }
 
 .result-stage-badge {
@@ -72,10 +79,11 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    background: var(--glass);
+    background: var(--bg-main);
     border-radius: 20px;
     padding: 24px;
     margin-bottom: 24px;
+    border: 1px solid var(--border-soft);
 }
 
 .age-box {
@@ -87,23 +95,23 @@
     display: block;
     font-size: 1.4rem;
     font-weight: 900;
-    color: var(--green-light);
+    color: var(--accent-dark);
     margin-bottom: 6px;
 }
 
 .age-box-label {
     font-size: 0.75rem;
-    color: rgba(255,255,255,0.4);
+    color: var(--text-muted);
 }
 
 .age-divider {
-    color: rgba(255,255,255,0.2);
+    color: var(--border);
     font-size: 1rem;
 }
 
 .result-tips {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid var(--glass-border);
+    background: var(--bg-main);
+    border: 1px solid var(--border-soft);
     border-radius: 16px;
     padding: 20px 24px;
     margin-bottom: 16px;
@@ -112,7 +120,7 @@
 .result-tips-title {
     font-size: 0.85rem;
     font-weight: 700;
-    color: var(--green-light);
+    color: var(--accent-dark);
     margin-bottom: 12px;
     display: flex;
     align-items: center;
@@ -128,7 +136,7 @@
 
 .result-tips ul li {
     font-size: 0.83rem;
-    color: rgba(255,255,255,0.55);
+    color: var(--text-soft);
     padding-right: 16px;
     position: relative;
     line-height: 1.6;
@@ -142,27 +150,24 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: var(--green-accent);
+    background: var(--accent);
 }
 
 .next-stage {
     font-size: 0.82rem;
-    color: rgba(255,255,255,0.35);
+    color: var(--text-muted);
     display: flex;
     align-items: center;
     gap: 8px;
     padding: 12px 16px;
-    background: var(--glass);
+    background: var(--bg-main);
     border-radius: 12px;
+    border: 1px solid var(--border-soft);
 }
 
-.next-stage strong {
-    color: rgba(255,255,255,0.6);
-}
+.next-stage strong { color: var(--text-soft); }
 
-.stages-section {
-    margin-bottom: 80px;
-}
+.stages-section { margin-bottom: 80px; }
 
 .stages-grid {
     display: grid;
@@ -172,22 +177,23 @@
 }
 
 .stage-card {
-    background: var(--green-deep);
-    border: 1px solid var(--glass-border);
+    background: var(--white);
+    border: 1px solid var(--border-soft);
     border-radius: 20px;
     padding: 24px 20px;
     transition: all 0.4s;
+    box-shadow: var(--shadow);
 }
 
 .stage-card:hover {
     transform: translateY(-6px);
-    border-color: rgba(165,165,141,0.4);
-    background: var(--green-mid);
+    border-color: var(--accent);
+    box-shadow: var(--shadow-lg);
 }
 
 .active-stage {
-    border-color: var(--green-accent);
-    background: var(--green-mid);
+    border-color: var(--accent);
+    background: rgba(144,171,139,0.08);
     position: relative;
 }
 
@@ -197,8 +203,8 @@
     top: -12px;
     right: 50%;
     transform: translateX(50%);
-    background: var(--green-accent);
-    color: var(--dark);
+    background: var(--accent-dark);
+    color: var(--white);
     font-size: 0.65rem;
     font-weight: 700;
     padding: 3px 12px;
@@ -209,19 +215,19 @@
 .stage-icon {
     width: 48px;
     height: 48px;
-    background: rgba(165,165,141,0.15);
+    background: rgba(144,171,139,0.15);
     border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
-    color: var(--green-light);
+    color: var(--accent-dark);
     margin-bottom: 16px;
 }
 
 .stage-age {
     font-size: 0.72rem;
-    color: var(--green-accent);
+    color: var(--accent-dark);
     font-weight: 700;
     letter-spacing: 1px;
     margin-bottom: 8px;
@@ -231,6 +237,7 @@
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 14px;
+    color: var(--text-main);
 }
 
 .stage-list {
@@ -242,7 +249,7 @@
 
 .stage-list li {
     font-size: 0.78rem;
-    color: rgba(255,255,255,0.45);
+    color: var(--text-soft);
     padding-right: 14px;
     position: relative;
     line-height: 1.5;
@@ -256,13 +263,11 @@
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background: var(--green-accent);
+    background: var(--accent);
     opacity: 0.6;
 }
 
-.human-age-section {
-    margin-bottom: 60px;
-}
+.human-age-section { margin-bottom: 60px; }
 
 .human-age-grid {
     display: flex;
@@ -274,8 +279,8 @@
 .human-age-card {
     flex: 1;
     min-width: 140px;
-    background: var(--green-deep);
-    border: 1px solid var(--glass-border);
+    background: var(--white);
+    border: 1px solid var(--border-soft);
     border-radius: 20px;
     padding: 24px 16px;
     display: flex;
@@ -284,53 +289,42 @@
     gap: 10px;
     transition: all 0.3s;
     text-align: center;
+    box-shadow: var(--shadow);
 }
 
 .human-age-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(165,165,141,0.4);
+    border-color: var(--accent);
+    box-shadow: var(--shadow-lg);
 }
 
 .cat-age-num {
     font-size: 1rem;
     font-weight: 700;
-    color: var(--green-light);
+    color: var(--accent-dark);
 }
 
 .human-age-card i {
     font-size: 0.8rem;
-    color: rgba(255,255,255,0.25);
+    color: var(--text-muted);
 }
 
 .human-age-num {
     font-size: 1rem;
     font-weight: 700;
-    color: var(--gold);
+    color: var(--text-soft);
 }
 
 @media (max-width: 1000px) {
-    .stages-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    .stages-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 700px) {
-    .age-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .stages-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .result-ages {
-        flex-direction: column;
-        gap: 12px;
-    }
+    .age-layout { grid-template-columns: 1fr; }
+    .stages-grid { grid-template-columns: 1fr 1fr; }
+    .result-ages { flex-direction: column; gap: 12px; }
 }
 
 @media (max-width: 480px) {
-    .stages-grid {
-        grid-template-columns: 1fr;
-    }
+    .stages-grid { grid-template-columns: 1fr; }
 }
