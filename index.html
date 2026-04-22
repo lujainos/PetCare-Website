@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بُسيس | رعاية قططك بعناية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">بُس<span>ي</span>س</div>
+    <ul class="nav-links">
+        <li><a href="#services">الخدمات</a></li>
+        <li><a href="#calculator">حاسبة الوجبات</a></li>
+        <li><a href="#tips">نصائح</a></li>
+        <li><a href="#contact">تواصل معنا</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">ابدأ الآن</a>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+    <ul>
+        <li><a href="#services" onclick="closeNav()">الخدمات</a></li>
+        <li><a href="#calculator" onclick="closeNav()">حاسبة الوجبات</a></li>
+        <li><a href="#tips" onclick="closeNav()">نصائح</a></li>
+        <li><a href="#contact" onclick="closeNav()">تواصل معنا</a></li>
+    </ul>
+</div>
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-tag"><i class="fas fa-paw"></i> منصة رعاية متكاملة للقطط</div>
+        <h1>كل ما تحتاجه<br>لرعاية <em>أليفك</em><br>بمكان واحد</h1>
+        <p>سجل صحي، حاسبة وجبات، ونصائح يومية — لأن قطتك تستحق أفضل رعاية ممكنة.</p>
+        <div class="hero-buttons">
+            <a href="#services" class="btn-main"><i class="fas fa-arrow-left"></i> اكتشف الخدمات</a>
+            <a href="#calculator" class="btn-ghost"><i class="fas fa-calculator"></i> حاسبة الوجبات</a>
+        </div>
+    </div>
+
+    <div class="hero-image-col">
+    <div class="hero-art">
+        
+        <div class="hero-img-wrap">
+            <img src="images/cats-hero-bg.jpg" alt="قطط" style="max-width: 100%; height: auto; border-radius: 20px;">
+        </div>
+        
+        <div class="hero-badge-float badge-1"><i class="fas fa-heart"></i><span>رعاية يومية</span></div>
+        <div class="hero-badge-float badge-2"><i class="fas fa-paw"></i><span>صحة مثالية</span></div>
+        <div class="hero-badge-float badge-3"><i class="fas fa-star"></i><span>قططك بألف خير</span></div>
+        
+        <div class="hero-bg-circle c1"></div>
+        <div class="hero-bg-circle c2"></div>
+        
+    </div>
+</div>
+</section>
+
+<section class="why-section">
+    <div class="why-layout">
+        <div class="fade-up">
+            <div class="section-label">لماذا نحن</div>
+            <h2 class="section-title">نحول رعاية قطتك لتجربة ممتعة وسهلة</h2>
+            <p class="section-desc">لأن كل قطة فريدة من نوعها، قدمنا أدوات ذكية تتكيف مع احتياجات أليفك تحديداً.</p>
+            <div class="reasons-grid">
+                <div class="reason-card fade-up"><div class="reason-num">١</div><div class="reason-title">دقة عالية</div><p class="reason-desc">توصيات مبنية على وزن وعمر وسلالة قطتك تحديداً</p></div>
+                <div class="reason-card fade-up"><div class="reason-num">٢</div><div class="reason-title">سهولة الاستخدام</div><p class="reason-desc">واجهة بسيطة ومريحة تناسب كل الأعمار</p></div>
+                <div class="reason-card fade-up"><div class="reason-num">٣</div><div class="reason-title">محتوى موثوق</div><p class="reason-desc">معلومات مبنية على أحدث الأبحاث البيطرية</p></div>
+                <div class="reason-card fade-up"><div class="reason-num">٤</div><div class="reason-title">متاح دائماً</div><p class="reason-desc">وصول فوري لكل بيانات قطتك في أي وقت</p></div>
+            </div>
+        </div>
+        <div class="fade-up why-stats-col">
+            <div class="stats-visual">
+                <div class="stat-big-card">
+                    <div class="stat-icon"><i class="fas fa-cat"></i></div>
+                    <div class="stat-num-big">٥+</div>
+                    <div class="stat-label-big">مراحل عمرية مُحللة</div>
+                </div>
+                <div class="stat-row">
+                    <div class="stat-mini-card"><i class="fas fa-utensils"></i><strong>حاسبة</strong><span>وجبات دقيقة</span></div>
+                    <div class="stat-mini-card"><i class="fas fa-file-medical"></i><strong>سجل</strong><span>صحي كامل</span></div>
+                    <div class="stat-mini-card"><i class="fas fa-book-open"></i><strong>مكتبة</strong><span>معرفية موثوقة</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="services-section">
+    <div class="services-header">
+        <div>
+            <div class="section-label">خدماتنا</div>
+            <h2 class="section-title services-title">كيف نرعى أليفك؟</h2>
+        </div>
+    </div>
+    <div class="services-grid-new">
+        <div class="service-card fade-up">
+            <div class="service-icon"><i class="fas fa-file-medical"></i></div>
+            <h3>السجل الصحي</h3>
+            <p>سجّل تطعيمات قطتك، مواعيد الطبيب، والملاحظات الصحية اليومية في ملف منظم وآمن.</p>
+            <a href="health-record.html" class="service-link">ابدأ الآن <i class="fas fa-arrow-left"></i></a>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:.1s">
+            <div class="service-icon"><i class="fas fa-utensils"></i></div>
+            <h3>حاسبة الوجبات</h3>
+            <p>احسب الكمية المثالية من الطعام بناءً على وزن وعمر وحالة قطتك الصحية لضمان تغذية متوازنة.</p>
+            <a href="#calculator" class="service-link">احسب الآن <i class="fas fa-arrow-left"></i></a>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:.2s">
+            <div class="service-icon"><i class="fas fa-birthday-cake"></i></div>
+            <h3>متابعة العمر والنمو</h3>
+            <p>تعرّف على المرحلة العمرية لقطتك واحتياجاتها الخاصة — من القطة الصغيرة حتى الكبيرة.</p>
+            <a href="age-tracker.html" class="service-link">استكشف <i class="fas fa-arrow-left"></i></a>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:.3s">
+            <div class="service-icon"><i class="fas fa-book-open"></i></div>
+            <h3>مكتبة المعرفة</h3>
+            <p>مقالات وأدلة موثوقة عن صحة القطط وسلوكها وتغذيتها — من مصادر بيطرية معتمدة.</p>
+            <a href="guide.html" class="service-link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+        </div>
+    </div>
+</section>
+
+<section id="calculator" class="calc-section">
+    <div class="calc-layout">
+        <div class="fade-up">
+            <div class="section-label">أداة تفاعلية</div>
+            <h2 class="section-title">حاسبة وجبات قطتك</h2>
+            <p class="section-desc">أدخل بيانات قطتك واحصل على توصية دقيقة بكمية الطعام اليومية المناسبة.</p>
+            <p class="calc-note">تعتمد الحسابات على المعايير البيطرية المعتمدة.<br>تذكّر أن استشارة الطبيب البيطري دائماً مهمة.</p>
+            <div class="calc-features">
+                <div class="calc-feat"><i class="fas fa-check-circle"></i> دقة عالية</div>
+                <div class="calc-feat"><i class="fas fa-check-circle"></i> معايير بيطرية معتمدة</div>
+                <div class="calc-feat"><i class="fas fa-check-circle"></i> مجانية تماماً</div>
+            </div>
+        </div>
+        <div class="calc-box fade-up" style="transition-delay:.2s">
+            <div class="calc-title">احسب الآن</div>
+            <div id="calcErrorBanner" class="calc-error-banner" role="alert" hidden></div>
+
+            <div class="form-group" id="groupCatName">
+                <label class="form-label" for="catName">اسم القطة <span class="label-optional">(اختياري)</span></label>
+                <input type="text" class="form-input" id="catName" placeholder="مثال: لولو" autocomplete="off" maxlength="40">
+                <p class="field-hint">إن تركت الحقل فارغاً نستخدم «قطتك» في النتيجة.</p>
+                <span class="field-error-msg" id="errCatName" hidden></span>
+            </div>
+
+            <div class="form-group" id="groupWeight">
+                <label class="form-label">الوزن</label>
+                <div class="weight-mode-row" role="tablist">
+                    <button type="button" class="weight-mode-btn active" id="wmExact" data-mode="exact" aria-selected="true">أعرف الوزن بالكيلوغرام</button>
+                    <button type="button" class="weight-mode-btn" id="wmEstimate" data-mode="estimate" aria-selected="false">لا أعرف — تقدير بالنطاق</button>
+                </div>
+
+                <div id="weightExactBlock" class="weight-block">
+                    <input type="number" class="form-input" id="catWeight" placeholder="مثال: 4.2" min="0.5" max="15" step="0.1" inputmode="decimal" aria-describedby="hintWeight">
+                    <p class="field-hint" id="hintWeight">وزّن القطة في المنزل إن أمكن، أو استخدم آخر وزن مسجّل عند البيطري.</p>
+                    <div class="weight-chips" aria-label="أوزان شائعة">
+                        <span class="weight-chips-label">سريع:</span>
+                        <button type="button" class="weight-chip" data-kg="2.5">٢٫٥ كغ</button>
+                        <button type="button" class="weight-chip" data-kg="3.5">٣٫٥ كغ</button>
+                        <button type="button" class="weight-chip" data-kg="4.5">٤٫٥ كغ</button>
+                        <button type="button" class="weight-chip" data-kg="5.5">٥٫٥ كغ</button>
+                    </div>
+                </div>
+
+                <div id="weightEstimateBlock" class="weight-block" hidden>
+                    <label class="form-label sr-only" for="weightBand">نطاق الوزن التقريبي</label>
+                    <select class="form-select" id="weightBand">
+                        <option value="">اختر النطاق الأقرب لوصف قطتك</option>
+                        <option value="1.8">رفيع جداً (أقل من ٢ كغ تقريباً)</option>
+                        <option value="2.8">خفيف (حوالي ٢٫٥–٣٫٥ كغ)</option>
+                        <option value="4.2">متوسط (حوالي ٣٫٥–٥ كغ) — شائع للبالغ</option>
+                        <option value="5.8">فوق المتوسط (حوالي ٥–٦٫٥ كغ)</option>
+                        <option value="7.5">كبير (حوالي ٧–٨ كغ)</option>
+                        <option value="10">كبير جداً (أكثر من ٨ كغ تقريباً)</option>
+                    </select>
+                    <p class="field-hint field-hint-warn"><i class="fas fa-info-circle"></i> النتيجة تقديرية؛ الدقة أعلى مع وزن حقيقي على الميزان.</p>
+                </div>
+                <span class="field-error-msg" id="errWeight" hidden></span>
+            </div>
+
+            <div class="form-group" id="groupCatAge">
+                <label class="form-label" for="catAge">العمر</label>
+                <select class="form-select" id="catAge">
+                    <option value="">اختر العمر</option>
+                    <option value="kitten">صغير (أقل من سنة)</option>
+                    <option value="adult">بالغ (١-٧ سنوات)</option>
+                    <option value="senior">كبير في السن (أكثر من ٧ سنوات)</option>
+                </select>
+                <span class="field-error-msg" id="errCatAge" hidden></span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="catCondition">الحالة الصحية</label>
+                <select class="form-select" id="catCondition">
+                    <option value="normal">طبيعي</option>
+                    <option value="neutered">معقّم أو مخصّى</option>
+                    <option value="pregnant">أثناء الحمل أو الرضاعة</option>
+                    <option value="active">عالٍ النشاط</option>
+                    <option value="overweight">تحتاج إنقاص وزن</option>
+                </select>
+            </div>
+            <div class="form-group" id="groupFoodType">
+                <label class="form-label" for="foodType">نوع الطعام</label>
+                <select class="form-select" id="foodType">
+                    <option value="">اختر نوع الطعام</option>
+                    <option value="dry">طعام جاف (كيبل)</option>
+                    <option value="wet">طعام رطب (علب)</option>
+                    <option value="mixed">مزيج (جاف + رطب)</option>
+                </select>
+                <span class="field-error-msg" id="errFoodType" hidden></span>
+            </div>
+            <button type="button" class="calc-btn" onclick="calculate()"><i class="fas fa-calculator"></i> احسب الكمية</button>
+            <div id="errorMsg" class="error-msg calc-error-msg" hidden></div>
+            <div class="loader" id="loader"></div>
+            <div class="calc-result" id="calcResult">
+                <div class="result-label" id="resultLabel"></div>
+                <div class="result-value" id="resultValue"></div>
+                <div class="result-note" id="resultNote"></div>
+                <div class="result-meals" id="resultMeals"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="tips" class="tips-section">
+    <div class="fade-up">
+        <div class="section-label">نصائح يومية</div>
+        <h2 class="section-title">اعرف أكثر عن قطتك</h2>
+    </div>
+    <div class="tips-grid">
+        <div class="tip-card fade-up"><div class="tip-icon"><i class="fas fa-tint"></i></div><h4>الماء أساسي</h4><p>القطط لا تشعر بالعطش بسهولة — تأكد دائماً من توفر ماء نظيف وطازج طول اليوم.</p></div>
+        <div class="tip-card fade-up" style="transition-delay:.1s"><div class="tip-icon"><i class="fas fa-futbol"></i></div><h4>اللعب ضروري</h4><p>خصص ١٥-٢٠ دقيقة يومياً للعب النشط — يحافظ على وزن صحي ويقلل التوتر.</p></div>
+        <div class="tip-card fade-up" style="transition-delay:.2s"><div class="tip-icon"><i class="fas fa-stethoscope"></i></div><h4>الفحص الدوري</h4><p>زيارة الطبيب البيطري مرة في السنة على الأقل — الوقاية أفضل من العلاج دائماً.</p></div>
+        <div class="tip-card fade-up" style="transition-delay:.3s"><div class="tip-icon"><i class="fas fa-moon"></i></div><h4>النوم الكافي</h4><p>القطط تنام ١٢-١٦ ساعة يومياً — هذا طبيعي تماماً، ووفّر لها مكاناً هادئاً ومريحاً.</p></div>
+        <div class="tip-card fade-up" style="transition-delay:.35s"><div class="tip-icon"><i class="fas fa-brush"></i></div><h4>العناية بالفراء</h4><p>تمشيط الفراء أسبوعياً يمنع تكتل الشعر ويقوي علاقتك بقطتك.</p></div>
+        <div class="tip-card fade-up" style="transition-delay:.4s"><div class="tip-icon"><i class="fas fa-tooth"></i></div><h4>صحة الأسنان</h4><p>نظّف أسنان قطتك أسبوعياً أو قدّم لها وجبات خاصة بصحة الأسنان للوقاية.</p></div>
+        <div class="tip-card fade-up" style="transition-delay:.45s"><div class="tip-icon"><i class="fas fa-home"></i></div><h4>بيئة آمنة</h4><p>تأكد من خلو البيت من النباتات السامة وإزالة الكوابل الكهربائية المكشوفة.</p></div>
+        <div class="tip-card fade-up" style="transition-delay:.5s"><div class="tip-icon"><i class="fas fa-shield-alt"></i></div><h4>التطعيمات الدورية</h4><p>التزم بجدول التطعيمات البيطرية — تحمي قطتك من أمراض خطيرة وقابلة للوقاية.</p></div>
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <div class="contact-layout">
+        <div class="fade-up">
+            <div class="section-label">تواصل معنا</div>
+            <h2 class="contact-heading">هل لديك سؤال عن أليفك؟</h2>
+            <p class="contact-desc">نحن هنا للمساعدة — سواء عن التغذية أو الصحة أو التسجيل في المنصة. راسلنا وسنرد خلال ٢٤ ساعة.</p>
+            <div class="contact-info">
+                <div class="contact-info-item"><i class="fas fa-envelope"></i><span>hello.bsees@outlook.com</span></div>
+                
+            </div>
+        </div>
+        <div class="fade-up" style="transition-delay:.2s">
+            <form class="contact-form" name="contact" method="POST" data-netlify="true"></form>
+                <div id="contactErrorBanner" class="contact-error-banner" role="alert" hidden></div>
+                <input type="text" class="form-input" id="contactName" placeholder="اسمك" autocomplete="name">
+                <span class="field-error-msg" id="errContactName" hidden></span>
+                <input type="email" class="form-input" id="contactEmail" placeholder="بريدك الإلكتروني" autocomplete="email">
+                <span class="field-error-msg" id="errContactEmail" hidden></span>
+                <select class="form-select" id="contactTopic">
+                    <option value="">موضوع الرسالة</option>
+                    <option value="nutrition">تغذية القطط</option>
+                    <option value="health">استفسار صحي</option>
+                    <option value="platform">التسجيل في المنصة</option>
+                    <option value="other">أخرى</option>
+                </select>
+                <textarea class="form-input contact-textarea" id="contactMsg" rows="4" placeholder="رسالتك..."></textarea>
+                <span class="field-error-msg" id="errContactMsg" hidden></span>
+                <button type="button" class="contact-btn" onclick="sendMessage()"><i class="fas fa-paper-plane"></i> أرسل رسالتك</button>
+                <div id="contactSuccess" class="success-msg" style="display:none; margin-top:12px;"><i class="fas fa-check-circle"></i> تم إرسال رسالتك بنجاح! سنرد عليك قريباً.</div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-logo">بُس<span>ي</span>س</div>
+    <p>© 2026 منصة رعاية الأليفة — جميع الحقوق محفوظة</p>
+    <p class="footer-sub">صُنع بحب لكل قطة <i class="fas fa-cat footer-sub-ico" aria-hidden="true"></i></p>
+</footer>
+
+<script>
+(function () {
+    var LS_CALC = 'bsees-calc-form';
+    var LS_CALC_RES = 'bsees-calc-result';
+    var LS_CONTACT = 'bsees-contact-draft';
+
+    function getWeightMode() {
+        var est = document.getElementById('wmEstimate');
+        return est && est.classList.contains('active') ? 'estimate' : 'exact';
+    }
+
+    function setWeightMode(mode) {
+        var exact = document.getElementById('wmExact');
+        var est = document.getElementById('wmEstimate');
+        var blockE = document.getElementById('weightExactBlock');
+        var blockEs = document.getElementById('weightEstimateBlock');
+        if (!exact || !est || !blockE || !blockEs) return;
+        var isEst = mode === 'estimate';
+        exact.classList.toggle('active', !isEst);
+        est.classList.toggle('active', isEst);
+        exact.setAttribute('aria-selected', (!isEst).toString());
+        est.setAttribute('aria-selected', isEst.toString());
+        blockE.hidden = isEst;
+        blockEs.hidden = !isEst;
+    }
+
+    function getCalcWeight() {
+        if (getWeightMode() === 'exact') {
+            var raw = String(document.getElementById('catWeight').value).replace(',', '.').trim();
+            var v = parseFloat(raw);
+            if (!isFinite(v)) return null;
+            return { kg: v, isEstimate: false };
+        }
+        var b = document.getElementById('weightBand').value;
+        if (!b) return null;
+        var kg = parseFloat(b);
+        if (!isFinite(kg)) return null;
+        return { kg: kg, isEstimate: true };
+    }
+
+    function maybeHideCalcBanner() {
+        if (!document.querySelector('#calculator .form-input.is-invalid, #calculator .form-select.is-invalid')) {
+            var banner = document.getElementById('calcErrorBanner');
+            var em = document.getElementById('errorMsg');
+            if (banner) { banner.hidden = true; banner.textContent = ''; }
+            if (em) { em.hidden = true; em.textContent = ''; }
+        }
+    }
+
+    function clearCalcWeightError() {
+        ['catWeight', 'weightBand'].forEach(function (id) {
+            var inp = document.getElementById(id);
+            if (inp) inp.classList.remove('is-invalid');
+        });
+        var ew = document.getElementById('errWeight');
+        if (ew) { ew.hidden = true; ew.textContent = ''; }
+        maybeHideCalcBanner();
+    }
+
+    function clearCalcField(inputId, errId) {
+        var inp = document.getElementById(inputId);
+        if (inp) inp.classList.remove('is-invalid');
+        var err = document.getElementById(errId);
+        if (err) { err.hidden = true; err.textContent = ''; }
+        maybeHideCalcBanner();
+    }
+
+    function clearCalcErrors() {
+        var banner = document.getElementById('calcErrorBanner');
+        if (banner) { banner.hidden = true; banner.textContent = ''; }
+        var em = document.getElementById('errorMsg');
+        if (em) { em.hidden = true; em.textContent = ''; }
+        ['errCatName', 'errWeight', 'errCatAge', 'errFoodType'].forEach(function (id) {
+            var el = document.getElementById(id);
+            if (el) { el.hidden = true; el.textContent = ''; }
+        });
+        document.querySelectorAll('#calculator .is-invalid').forEach(function (n) {
+            n.classList.remove('is-invalid');
+        });
+    }
+
+    function validateCalc() {
+        clearCalcErrors();
+        var firstEl = null;
+        function inv(inputId, errId, msg) {
+            var inp = document.getElementById(inputId);
+            var err = document.getElementById(errId);
+            if (inp) {
+                inp.classList.add('is-invalid');
+                if (!firstEl) firstEl = inp;
+            }
+            if (err) { err.textContent = msg; err.hidden = false; }
+        }
+
+        if (getWeightMode() === 'exact') {
+            var raw = String(document.getElementById('catWeight').value).replace(',', '.').trim();
+            var wv = parseFloat(raw);
+            if (!raw || !isFinite(wv)) {
+                inv('catWeight', 'errWeight', 'يرجى إدخال وزن القطة بالكيلوغرام.');
+            } else if (wv < 0.5 || wv > 15) {
+                inv('catWeight', 'errWeight', 'الوزن يجب أن يكون بين ٠٫٥ و ١٥ كغ.');
+            }
+        } else if (!document.getElementById('weightBand').value) {
+            inv('weightBand', 'errWeight', 'يرجى اختيار النطاق الأقرب لوصف قطتك.');
+        }
+
+        if (!document.getElementById('catAge').value) {
+            inv('catAge', 'errCatAge', 'يرجى اختيار العمر.');
+        }
+
+        if (!document.getElementById('foodType').value) {
+            inv('foodType', 'errFoodType', 'يرجى اختيار نوع الطعام.');
+        }
+
+        var ok = !document.querySelector('#calculator .form-input.is-invalid, #calculator .form-select.is-invalid');
+        if (!ok) {
+            var banner = document.getElementById('calcErrorBanner');
+            if (banner) {
+                banner.textContent = 'يرجى تصحيح الحقول المشار إليها قبل المتابعة.';
+                banner.hidden = false;
+            }
+            var em = document.getElementById('errorMsg');
+            if (em) {
+                em.textContent = 'توجد بيانات ناقصة أو غير صالحة.';
+                em.hidden = false;
+            }
+            if (firstEl) {
+                firstEl.focus({ preventScroll: true });
+                firstEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+        return ok;
+    }
+
+    window.persistCalcForm = function () {
+        try {
+            localStorage.setItem(LS_CALC, JSON.stringify({
+                weightMode: getWeightMode(),
+                catName: document.getElementById('catName').value,
+                catWeight: document.getElementById('catWeight').value,
+                weightBand: document.getElementById('weightBand').value,
+                catAge: document.getElementById('catAge').value,
+                catCondition: document.getElementById('catCondition').value,
+                foodType: document.getElementById('foodType').value
+            }));
+        } catch (e) {}
+    };
+
+    function restoreCalcForm() {
+        try {
+            var raw = localStorage.getItem(LS_CALC);
+            if (!raw) return;
+            var d = JSON.parse(raw);
+            setWeightMode(d.weightMode === 'estimate' ? 'estimate' : 'exact');
+            if (d.catName != null) document.getElementById('catName').value = d.catName;
+            if (d.catWeight != null && d.catWeight !== '') document.getElementById('catWeight').value = d.catWeight;
+            if (d.weightBand != null) document.getElementById('weightBand').value = d.weightBand;
+            if (d.catAge != null) document.getElementById('catAge').value = d.catAge;
+            if (d.catCondition != null) document.getElementById('catCondition').value = d.catCondition;
+            if (d.foodType != null) document.getElementById('foodType').value = d.foodType;
+        } catch (e) {}
+    }
+
+    window.persistCalcResult = function () {
+        var resultDiv = document.getElementById('calcResult');
+        if (!resultDiv.classList.contains('show')) {
+            localStorage.removeItem(LS_CALC_RES);
+            return;
+        }
+        try {
+            localStorage.setItem(LS_CALC_RES, JSON.stringify({
+                resultLabel: document.getElementById('resultLabel').textContent,
+                resultValue: document.getElementById('resultValue').textContent,
+                resultNote: document.getElementById('resultNote').textContent,
+                resultMeals: document.getElementById('resultMeals').textContent
+            }));
+        } catch (e) {}
+    };
+
+    function restoreCalcResult() {
+        try {
+            var raw = localStorage.getItem(LS_CALC_RES);
+            if (!raw) return;
+            var d = JSON.parse(raw);
+            document.getElementById('resultLabel').textContent = d.resultLabel || '';
+            document.getElementById('resultValue').textContent = d.resultValue || '';
+            document.getElementById('resultNote').textContent = d.resultNote || '';
+            document.getElementById('resultMeals').textContent = d.resultMeals || '';
+            document.getElementById('calcResult').classList.add('show');
+        } catch (e) {}
+    }
+
+    function clearContactErrors() {
+        var b = document.getElementById('contactErrorBanner');
+        if (b) { b.hidden = true; b.textContent = ''; }
+        ['errContactName', 'errContactEmail', 'errContactMsg'].forEach(function (id) {
+            var el = document.getElementById(id);
+            if (el) { el.hidden = true; el.textContent = ''; }
+        });
+        ['contactName', 'contactEmail', 'contactMsg', 'contactTopic'].forEach(function (id) {
+            var el = document.getElementById(id);
+            if (el) el.classList.remove('is-invalid');
+        });
+    }
+
+    function maybeHideContactBanner() {
+        if (!document.querySelector('#contact .form-input.is-invalid')) {
+            var b = document.getElementById('contactErrorBanner');
+            if (b) { b.hidden = true; b.textContent = ''; }
+        }
+    }
+
+    function clearContactField(inputId, errId) {
+        var inp = document.getElementById(inputId);
+        if (inp) inp.classList.remove('is-invalid');
+        var err = document.getElementById(errId);
+        if (err) { err.hidden = true; err.textContent = ''; }
+        maybeHideContactBanner();
+    }
+
+    function validateContact() {
+        clearContactErrors();
+        var ok = true;
+        var firstBad = null;
+        function inv(id, errId, msg) {
+            var inp = document.getElementById(id);
+            var err = document.getElementById(errId);
+            if (inp) {
+                inp.classList.add('is-invalid');
+                if (!firstBad) firstBad = inp;
+            }
+            if (err) { err.textContent = msg; err.hidden = false; }
+            ok = false;
+        }
+
+        var name = document.getElementById('contactName').value.trim();
+        var email = document.getElementById('contactEmail').value.trim();
+        var msg = document.getElementById('contactMsg').value.trim();
+        var emRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!name) inv('contactName', 'errContactName', 'يرجى إدخال الاسم.');
+        if (!email) inv('contactEmail', 'errContactEmail', 'يرجى إدخال البريد الإلكتروني.');
+        else if (!emRe.test(email)) inv('contactEmail', 'errContactEmail', 'صيغة البريد غير صالحة.');
+        if (!msg) inv('contactMsg', 'errContactMsg', 'يرجى كتابة الرسالة.');
+
+        if (!ok) {
+            var banner = document.getElementById('contactErrorBanner');
+            if (banner) {
+                banner.textContent = 'تأكد من إكمال الحقول المطلوبة بشكل صحيح.';
+                banner.hidden = false;
+            }
+            if (firstBad) {
+                firstBad.focus({ preventScroll: true });
+                firstBad.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+        return ok;
+    }
+
+    window.persistContactDraft = function () {
+        try {
+            localStorage.setItem(LS_CONTACT, JSON.stringify({
+                name: document.getElementById('contactName').value,
+                email: document.getElementById('contactEmail').value,
+                topic: document.getElementById('contactTopic').value,
+                msg: document.getElementById('contactMsg').value
+            }));
+        } catch (e) {}
+    };
+
+    function restoreContactDraft() {
+        try {
+            var raw = localStorage.getItem(LS_CONTACT);
+            if (!raw) return;
+            var d = JSON.parse(raw);
+            if (d.name != null) document.getElementById('contactName').value = d.name;
+            if (d.email != null) document.getElementById('contactEmail').value = d.email;
+            if (d.topic != null) document.getElementById('contactTopic').value = d.topic;
+            if (d.msg != null) document.getElementById('contactMsg').value = d.msg;
+        } catch (e) {}
+    }
+
+    window.calculate = function () {
+        var name = document.getElementById('catName').value.trim() || 'قطتك';
+        var age = document.getElementById('catAge').value;
+        var condition = document.getElementById('catCondition').value;
+        var food = document.getElementById('foodType').value;
+        var loader = document.getElementById('loader');
+        var resultDiv = document.getElementById('calcResult');
+        persistCalcForm();
+        if (!validateCalc()) {
+            resultDiv.classList.remove('show');
+            try { localStorage.removeItem(LS_CALC_RES); } catch (e) {}
+            return;
+        }
+        var wInfo = getCalcWeight();
+        var weight = wInfo.kg;
+        var estimateExtra = wInfo.isEstimate ? ' يُستخدم وزن تقديري من نطاق تقريبي — الدقة أعلى عند قياس الوزن على الميزان.' : '';
+
+        resultDiv.classList.remove('show');
+        loader.style.display = 'block';
+        setTimeout(function () {
+            loader.style.display = 'none';
+            var cal = 70 * Math.pow(weight, 0.75);
+            if (age === 'kitten') cal *= 2.5; else if (age === 'senior') cal *= 1.1; else cal *= 1.4;
+            if (condition === 'neutered') cal *= 0.85; else if (condition === 'pregnant') cal *= 1.6;
+            else if (condition === 'active') cal *= 1.3; else if (condition === 'overweight') cal *= 0.8;
+            cal = Math.round(cal);
+            var amount = '', note = '', meals = '';
+            if (food === 'dry') {
+                var g = Math.round(cal / 3.5);
+                amount = g + ' غرام / يوم'; note = '(ما يعادل حوالي ' + Math.round(g / 30 * 10) / 10 + ' كوب)';
+                meals = 'صباحاً ' + Math.round(g / 2) + 'غ ومساءً ' + Math.round(g / 2) + 'غ';
+            } else if (food === 'wet') {
+                var g2 = Math.round(cal);
+                amount = g2 + ' غرام / يوم'; note = 'أي ما يقارب ' + Math.ceil(g2 / 85) + ' علبة صغيرة (٨٥غ)';
+                meals = 'يُوزع على ٣ وجبات يومياً';
+            } else {
+                var dg = Math.round((cal * 0.5) / 3.5), wg = Math.round(cal * 0.5);
+                amount = dg + 'غ جاف + ' + wg + 'غ رطب'; note = 'توزيع متوازن بين الوجبتين';
+                meals = 'جاف صباحاً ورطب مساءً';
+            }
+            if (estimateExtra) note += estimateExtra;
+            document.getElementById('resultLabel').textContent = 'الكمية الموصى بها لـ ' + name + ' (' + cal + ' سعرة يومياً)';
+            document.getElementById('resultValue').textContent = amount;
+            document.getElementById('resultNote').textContent = note;
+            document.getElementById('resultMeals').textContent = meals;
+            resultDiv.classList.add('show');
+            persistCalcResult();
+        }, 600);
+    };
+
+    window.sendMessage = function () {
+        document.getElementById('contactSuccess').style.display = 'none';
+        if (!validateContact()) return;
+        document.getElementById('contactSuccess').style.display = 'block';
+        document.getElementById('contactName').value = '';
+        document.getElementById('contactEmail').value = '';
+        document.getElementById('contactMsg').value = '';
+        document.getElementById('contactTopic').value = '';
+        clearContactErrors();
+        try { localStorage.removeItem(LS_CONTACT); } catch (e) {}
+    };
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (el) { if (el.isIntersecting) el.target.classList.add('visible'); });
+        }, { threshold: 0.05 });
+        document.querySelectorAll('.fade-up').forEach(function (el) { observer.observe(el); });
+
+        restoreCalcForm();
+        restoreCalcResult();
+        restoreContactDraft();
+
+        var wmE = document.getElementById('wmExact');
+        var wmEs = document.getElementById('wmEstimate');
+        if (wmE) {
+            wmE.addEventListener('click', function () {
+                setWeightMode('exact');
+                clearCalcWeightError();
+                persistCalcForm();
+            });
+        }
+        if (wmEs) {
+            wmEs.addEventListener('click', function () {
+                setWeightMode('estimate');
+                clearCalcWeightError();
+                persistCalcForm();
+            });
+        }
+
+        document.querySelectorAll('.weight-chip').forEach(function (chip) {
+            chip.addEventListener('click', function () {
+                var kg = chip.getAttribute('data-kg');
+                if (!kg) return;
+                document.getElementById('catWeight').value = kg;
+                setWeightMode('exact');
+                clearCalcWeightError();
+                persistCalcForm();
+            });
+        });
+
+        var cw = document.getElementById('catWeight');
+        if (cw) {
+            cw.addEventListener('input', function () { clearCalcWeightError(); persistCalcForm(); });
+            cw.addEventListener('change', function () { clearCalcWeightError(); persistCalcForm(); });
+        }
+        var wb = document.getElementById('weightBand');
+        if (wb) {
+            wb.addEventListener('input', function () { clearCalcWeightError(); persistCalcForm(); });
+            wb.addEventListener('change', function () { clearCalcWeightError(); persistCalcForm(); });
+        }
+
+        var ca = document.getElementById('catAge');
+        if (ca) {
+            ca.addEventListener('input', function () { clearCalcField('catAge', 'errCatAge'); persistCalcForm(); });
+            ca.addEventListener('change', function () { clearCalcField('catAge', 'errCatAge'); persistCalcForm(); });
+        }
+        var ft = document.getElementById('foodType');
+        if (ft) {
+            ft.addEventListener('input', function () { clearCalcField('foodType', 'errFoodType'); persistCalcForm(); });
+            ft.addEventListener('change', function () { clearCalcField('foodType', 'errFoodType'); persistCalcForm(); });
+        }
+
+        ['catName', 'catCondition'].forEach(function (id) {
+            var el = document.getElementById(id);
+            if (!el) return;
+            el.addEventListener('input', persistCalcForm);
+            el.addEventListener('change', persistCalcForm);
+        });
+
+        [['contactName', 'errContactName'], ['contactEmail', 'errContactEmail'], ['contactMsg', 'errContactMsg']].forEach(function (pair) {
+            var el = document.getElementById(pair[0]);
+            if (!el) return;
+            function h() {
+                clearContactField(pair[0], pair[1]);
+                persistContactDraft();
+            }
+            el.addEventListener('input', h);
+            el.addEventListener('change', h);
+        });
+
+        var topicEl = document.getElementById('contactTopic');
+        if (topicEl) {
+            topicEl.addEventListener('input', persistContactDraft);
+            topicEl.addEventListener('change', persistContactDraft);
+        }
+    });
+})();
+
+function toggleNav() { document.getElementById('mobileMenu').classList.toggle('open'); }
+function closeNav()  { document.getElementById('mobileMenu').classList.remove('open'); }
+</script>
+</body>
+</html>

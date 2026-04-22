@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بُسيس | الدليل المعرفي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/guide.css">
+</head>
+<body class="guide-body">
+
+<div class="guide-bg" aria-hidden="true"></div>
+
+<main class="guide-main">
+
+    <a href="index.html" class="guide-back"><i class="fas fa-arrow-right"></i> العودة للرئيسية</a>
+
+    <header class="guide-hero">
+        <div class="guide-hero-badge">محتوى مرجعي موثوق</div>
+        <h1>دليل <em>بُسيس</em> المعرفي</h1>
+        <p class="guide-hero-lead">مرجع واحد يجمع التغذية، الصحة، السلوك، والعناية اليومية — مُنسّقاً كتجربة قراءة هادئة وواضحة.</p>
+        <div class="guide-hero-metrics" aria-hidden="true">
+            <div class="guide-metric">
+                <span class="guide-metric-num">٨</span>
+                <span class="guide-metric-label">موضوعات عميقة</span>
+            </div>
+            <div class="guide-metric">
+                <span class="guide-metric-num">٥</span>
+                <span class="guide-metric-label">مصادر علمية</span>
+            </div>
+            <div class="guide-metric">
+                <span class="guide-metric-num">١٠٠٪</span>
+                <span class="guide-metric-label">مجاني للقراءة</span>
+            </div>
+        </div>
+    </header>
+
+    <p class="guide-strip">محتوى مرجعي للتوعية — لا يغني عن الفحص البيطري عند الحاجة.</p>
+
+    <div class="guide-toolbar">
+        <div class="guide-search">
+            <i class="fas fa-search guide-search-icon"></i>
+            <input type="text" class="guide-search-input" id="searchInput" placeholder="ابحث في العناوين والوصف…" oninput="filterCards()" autocomplete="off">
+        </div>
+
+        <div class="guide-cats">
+            <button type="button" class="guide-cat active" onclick="filterCat('all', this)"><span class="guide-cat-ico"><i class="fas fa-layer-group"></i></span> الكل</button>
+            <button type="button" class="guide-cat" onclick="filterCat('nutrition', this)"><span class="guide-cat-ico"><i class="fas fa-apple-whole"></i></span> تغذية</button>
+            <button type="button" class="guide-cat" onclick="filterCat('health', this)"><span class="guide-cat-ico"><i class="fas fa-heart-pulse"></i></span> صحة</button>
+            <button type="button" class="guide-cat" onclick="filterCat('behavior', this)"><span class="guide-cat-ico"><i class="fas fa-comments"></i></span> سلوك</button>
+            <button type="button" class="guide-cat" onclick="filterCat('care', this)"><span class="guide-cat-ico"><i class="fas fa-spa"></i></span> عناية</button>
+        </div>
+    </div>
+
+    <div class="guide-grid" id="guideGrid">
+
+        <article class="guide-card reveal-ready" data-cat="nutrition" data-title="أساسيات التغذية السليمة لقطتك">
+            <div class="guide-card-inner">
+                <div class="guide-card-archwrap">
+                    <div class="guide-card-arch guide-card-arch--nutrition">
+                        <div class="guide-card-mark nutrition"><i class="fas fa-utensils" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+                <span class="guide-cat-badge">تغذية</span>
+                <h3 class="guide-card-title">أساسيات التغذية السليمة</h3>
+                <p class="guide-card-desc">تعرّف على أفضل أنواع الطعام لقطتك وكيفية قراءة المكونات لضمان صحة مثالية.</p>
+                <div class="guide-card-body" id="art1" style="display:none" hidden>
+                    <h4>ما الذي تحتاجه قطتك فعلاً؟</h4>
+                    <p>القطط حيوانات آكلة للحوم بشكل صارم (Obligate Carnivores)، تحتاج إلى بروتين حيواني عالي الجودة. تأكد أن المكوّن الأول في طعامها هو لحم حقيقي — مثل دجاج أو سمك أو لحم بقر.</p>
+                    <ul class="guide-list">
+                        <li><strong>البروتين:</strong> أساس وجبة القطة، لا تقل عن 30% في الطعام الجاف</li>
+                        <li><strong>الدهون الصحية:</strong> ضرورية للفراء اللامع وصحة الجلد</li>
+                        <li><strong>التورين:</strong> حمض أميني لا تستطيع القطة تصنيعه — ضروري لصحة القلب والعيون</li>
+                        <li><strong>الماء:</strong> الطعام الرطب يوفر حوالي 70% من احتياج القطة للماء</li>
+                    </ul>
+                    <div class="guide-warning"><i class="fas fa-exclamation-triangle"></i> <strong>تجنب:</strong> البصل، الثوم، العنب، الشوكولاتة، والكافيين — جميعها سامة للقطط.</div>
+                    <p class="guide-ref"><i class="fas fa-graduation-cap"></i> المصدر: الجمعية الأمريكية لطب القطط (AAFP)</p>
+                </div>
+                <button type="button" class="guide-read-btn" onclick="toggleArticle('art1', this)" aria-expanded="false"><span>اقرأ المقال</span> <i class="fas fa-chevron-down"></i></button>
+            </div>
+        </article>
+
+        <article class="guide-card reveal-ready" data-cat="nutrition" data-title="الفرق بين الطعام الجاف والرطب">
+            <div class="guide-card-inner">
+                <div class="guide-card-archwrap">
+                    <div class="guide-card-arch guide-card-arch--nutrition">
+                        <div class="guide-card-mark nutrition"><i class="fas fa-scale-balanced" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+                <span class="guide-cat-badge">تغذية</span>
+                <h3 class="guide-card-title">جاف أم رطب؟ الفرق الحقيقي</h3>
+                <p class="guide-card-desc">مقارنة شاملة بين نوعي الطعام ومتى تختار كل نوع لصحة قطتك.</p>
+                <div class="guide-card-body" id="art2" style="display:none" hidden>
+                    <div class="guide-compare">
+                        <div class="compare-col">
+                            <h4><i class="fas fa-box"></i> الطعام الجاف</h4>
+                            <ul class="guide-list">
+                                <li>اقتصادي وسهل التخزين</li>
+                                <li>يساعد على تنظيف الأسنان</li>
+                                <li>مناسب للإبقاء طوال اليوم</li>
+                                <li>محتوى ماء منخفض (10%)</li>
+                                <li>قد يحتوي على نشويات زائدة</li>
+                            </ul>
+                        </div>
+                        <div class="compare-col">
+                            <h4><i class="fas fa-droplet"></i> الطعام الرطب</h4>
+                            <ul class="guide-list">
+                                <li>محتوى ماء عالٍ (70-80%)</li>
+                                <li>بروتين أعلى وكربوهيدرات أقل</li>
+                                <li>أكثر جاذبية للقطط عادة</li>
+                                <li>أغلى ثمناً</li>
+                                <li>يفسد سريعاً بعد الفتح</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p>التوصية البيطرية: المزج بين النوعين يعطي أفضل النتائج — رطب صباحاً وجاف مساءً.</p>
+                    <p class="guide-ref"><i class="fas fa-graduation-cap"></i> المصدر: الكلية الأمريكية للطب البيطري الداخلي (ACVIM)</p>
+                </div>
+                <button type="button" class="guide-read-btn" onclick="toggleArticle('art2', this)" aria-expanded="false"><span>اقرأ المقال</span> <i class="fas fa-chevron-down"></i></button>
+            </div>
+        </article>
+
+        <article class="guide-card reveal-ready" data-cat="health" data-title="التطعيمات الأساسية للقطط">
+            <div class="guide-card-inner">
+                <div class="guide-card-archwrap">
+                    <div class="guide-card-arch guide-card-arch--health">
+                        <div class="guide-card-mark health"><i class="fas fa-syringe" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+                <span class="guide-cat-badge health">صحة</span>
+                <h3 class="guide-card-title">التطعيمات الأساسية</h3>
+                <p class="guide-card-desc">جدول تطعيمات قطتك من الصغر حتى الكبر — ما هو ضروري وما هو اختياري.</p>
+                <div class="guide-card-body" id="art3" style="display:none" hidden>
+                    <h4>التطعيمات الأساسية (Core Vaccines)</h4>
+                    <div class="guide-table">
+                        <div class="guide-table-row header"><span>التطعيم</span><span>العمر الأول</span><span>التكرار</span></div>
+                        <div class="guide-table-row"><span>الثلاثي (FVRCP)</span><span>٦-٨ أسابيع</span><span>كل ٣ سنوات</span></div>
+                        <div class="guide-table-row"><span>داء الكلب (Rabies)</span><span>١٢ أسبوع</span><span>سنوياً أو ٣ سنوات</span></div>
+                        <div class="guide-table-row"><span>لوكيميا القطط (FeLV)</span><span>٨ أسابيع</span><span>سنوياً للقطط الخارجية</span></div>
+                    </div>
+                    <div class="guide-warning"><i class="fas fa-info-circle"></i> القطط داخل المنزل لا تزال بحاجة للتطعيمات — الفيروسات يمكن أن تنتقل عبر الملابس والأحذية.</div>
+                    <p class="guide-ref"><i class="fas fa-graduation-cap"></i> المصدر: الجمعية العالمية لطب القطط (WSAVA)</p>
+                </div>
+                <button type="button" class="guide-read-btn" onclick="toggleArticle('art3', this)" aria-expanded="false"><span>اقرأ المقال</span> <i class="fas fa-chevron-down"></i></button>
+            </div>
+        </article>
+
+        <article class="guide-card reveal-ready" data-cat="health" data-title="علامات تحتاج زيارة الطبيب البيطري فوراً">
+            <div class="guide-card-inner">
+                <div class="guide-card-archwrap">
+                    <div class="guide-card-arch guide-card-arch--health">
+                        <div class="guide-card-mark health"><i class="fas fa-stethoscope" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+                <span class="guide-cat-badge health">صحة</span>
+                <h3 class="guide-card-title">علامات تستوجب الطبيب فوراً</h3>
+                <p class="guide-card-desc">العلامات التي تنبئ بمشكلة صحية خطيرة — لا تتجاهلها.</p>
+                <div class="guide-card-body" id="art4" style="display:none" hidden>
+                    <h4>اذهب لطوارئ بيطرية إذا لاحظت:</h4>
+                    <ul class="guide-list emergency">
+                        <li>صعوبة في التنفس أو فتح الفم للتنفس</li>
+                        <li>عدم القدرة على التبول لأكثر من 12 ساعة</li>
+                        <li>تشنجات أو فقدان الوعي</li>
+                        <li>نزيف مستمر أو بلع جسم غريب</li>
+                        <li>الإغماء أو عدم الاستجابة للمس</li>
+                        <li>التقيؤ أو الإسهال المتكرر لأكثر من 24 ساعة</li>
+                    </ul>
+                    <h4>راقب واستشر البيطري إذا:</h4>
+                    <ul class="guide-list">
+                        <li>قلة الشهية لأكثر من يومين</li>
+                        <li>شرب الماء بكميات غير معتادة</li>
+                        <li>فقدان الوزن المفاجئ</li>
+                        <li>تغير في سلوك صندوق الرمل</li>
+                    </ul>
+                    <p class="guide-ref"><i class="fas fa-graduation-cap"></i> المصدر: الجمعية الأمريكية لطب القطط (AAFP)</p>
+                </div>
+                <button type="button" class="guide-read-btn" onclick="toggleArticle('art4', this)" aria-expanded="false"><span>اقرأ المقال</span> <i class="fas fa-chevron-down"></i></button>
+            </div>
+        </article>
+
+        <article class="guide-card reveal-ready" data-cat="behavior" data-title="فهم سلوك القطط وتفسير المواء">
+            <div class="guide-card-inner">
+                <div class="guide-card-archwrap">
+                    <div class="guide-card-arch guide-card-arch--behavior">
+                        <div class="guide-card-mark behavior"><i class="fas fa-cat" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+                <span class="guide-cat-badge behavior">سلوك</span>
+                <h3 class="guide-card-title">فهم سلوك قطتك</h3>
+                <p class="guide-card-desc">لماذا تموء قطتك؟ وكيف تتعامل مع السلوكيات المفاجئة بذكاء وحب.</p>
+                <div class="guide-card-body" id="art5" style="display:none" hidden>
+                    <h4>تفسير لغة المواء</h4>
+                    <div class="guide-table">
+                        <div class="guide-table-row header"><span>نوع المواء</span><span>المعنى المحتمل</span></div>
+                        <div class="guide-table-row"><span>قصير وخفيف</span><span>تحية أو طلب انتباه</span></div>
+                        <div class="guide-table-row"><span>طويل ومستمر</span><span>جوع أو احتياج لشيء ما</span></div>
+                        <div class="guide-table-row"><span>عالٍ ومفاجئ</span><span>ألم أو خوف</span></div>
+                        <div class="guide-table-row"><span>غناء (Trill)</span><span>فرح وترحيب</span></div>
+                        <div class="guide-table-row"><span>خرخرة (Purr)</span><span>ارتياح — وأحياناً ألم أو توتر</span></div>
+                    </div>
+                    <h4>لغة الجسد</h4>
+                    <ul class="guide-list">
+                        <li>ذيل مرفوع = سعادة وثقة</li>
+                        <li>أذنان مسطحتان خلف = خوف أو عدوانية</li>
+                        <li>رمشة بطيئة = ثقة وحب (ردّ عليها برمشة بطيئة)</li>
+                        <li>البطن للأعلى = ثقة كاملة — لكن ليس دعوة للمداعبة دائماً</li>
+                    </ul>
+                    <p class="guide-ref"><i class="fas fa-graduation-cap"></i> المصدر: مجلة Applied Animal Behaviour Science</p>
+                </div>
+                <button type="button" class="guide-read-btn" onclick="toggleArticle('art5', this)" aria-expanded="false"><span>اقرأ المقال</span> <i class="fas fa-chevron-down"></i></button>
+            </div>
+        </article>
+
+        <article class="guide-card reveal-ready" data-cat="behavior" data-title="تعليم القطة استخدام صندوق الرمل">
+            <div class="guide-card-inner">
+                <div class="guide-card-archwrap">
+                    <div class="guide-card-arch guide-card-arch--behavior">
+                        <div class="guide-card-mark behavior"><i class="fas fa-box-open" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+                <span class="guide-cat-badge behavior">سلوك</span>
+                <h3 class="guide-card-title">تدريب صندوق الرمل</h3>
+                <p class="guide-card-desc">خطوات عملية لتدريب قطتك على استخدام الصندوق بشكل صحيح وتقليل المشكلات.</p>
+                <div class="guide-card-body" id="art6" style="display:none" hidden>
+                    <h4>القاعدة الذهبية: صندوق لكل قطة + واحد إضافي</h4>
+                    <ul class="guide-list">
+                        <li><strong>الموقع:</strong> هادئ، بعيد عن الطعام والماء، سهل الوصول</li>
+                        <li><strong>النوع:</strong> مفتوح أفضل للكثير من القطط — المغلق قد يسبب توتراً</li>
+                        <li><strong>الرمل:</strong> عمق 5-7 سم، رمل غير معطر أو خفيف العطر</li>
+                        <li><strong>التنظيف:</strong> يومياً للفضلات، أسبوعياً للرمل كاملاً</li>
+                    </ul>
+                    <div class="guide-warning"><i class="fas fa-info-circle"></i> إذا أخطأت القطة خارج الصندوق — لا عقاب. راجع نظافة الصندوق أو استشر بيطرياً لاستبعاد مشكلة طبية.</div>
+                    <p class="guide-ref"><i class="fas fa-graduation-cap"></i> المصدر: American Animal Hospital Association (AAHA)</p>
+                </div>
+                <button type="button" class="guide-read-btn" onclick="toggleArticle('art6', this)" aria-expanded="false"><span>اقرأ المقال</span> <i class="fas fa-chevron-down"></i></button>
+            </div>
+        </article>
+
+        <article class="guide-card reveal-ready" data-cat="care" data-title="العناية بفراء القطة وتمشيطه">
+            <div class="guide-card-inner">
+                <div class="guide-card-archwrap">
+                    <div class="guide-card-arch guide-card-arch--care">
+                        <div class="guide-card-mark care"><i class="fas fa-brush" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+                <span class="guide-cat-badge care">عناية</span>
+                <h3 class="guide-card-title">العناية بالفراء والتمشيط</h3>
+                <p class="guide-card-desc">كيف تعتن بفراء قطتك حسب نوعه وتحافظ على لمعانه وصحته.</p>
+                <div class="guide-card-body" id="art7" style="display:none" hidden>
+                    <div class="guide-table">
+                        <div class="guide-table-row header"><span>نوع الفراء</span><span>التمشيط</span><span>الاستحمام</span></div>
+                        <div class="guide-table-row"><span>قصير</span><span>مرة أسبوعياً</span><span>كل 4-6 أسابيع</span></div>
+                        <div class="guide-table-row"><span>متوسط</span><span>مرتان أسبوعياً</span><span>كل 3-4 أسابيع</span></div>
+                        <div class="guide-table-row"><span>طويل (فارسي)</span><span>يومياً</span><span>كل 2-3 أسابيع</span></div>
+                    </div>
+                    <h4>نصائح التمشيط</h4>
+                    <ul class="guide-list">
+                        <li>ابدأ من الرأس للذيل باتجاه نمو الشعر</li>
+                        <li>استخدم مشطاً ناعماً لتفادي جرح الجلد</li>
+                        <li>التمشيط المنتظم يقلل من كرات الشعر في المعدة</li>
+                        <li>تحقق من وجود قمل أو علامات جلدية غير طبيعية</li>
+                    </ul>
+                </div>
+                <button type="button" class="guide-read-btn" onclick="toggleArticle('art7', this)" aria-expanded="false"><span>اقرأ المقال</span> <i class="fas fa-chevron-down"></i></button>
+            </div>
+        </article>
+
+        <article class="guide-card reveal-ready" data-cat="care" data-title="تقليم أظافر القطة في المنزل">
+            <div class="guide-card-inner">
+                <div class="guide-card-archwrap">
+                    <div class="guide-card-arch guide-card-arch--care">
+                        <div class="guide-card-mark care"><i class="fas fa-scissors" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+                <span class="guide-cat-badge care">عناية</span>
+                <h3 class="guide-card-title">تقليم الأظافر في المنزل</h3>
+                <p class="guide-card-desc">دليل خطوة بخطوة لتقليم أظافر قطتك بأمان وبدون توتر لكلاكما.</p>
+                <div class="guide-card-body" id="art8" style="display:none" hidden>
+                    <h4>الأدوات التي تحتاجها</h4>
+                    <ul class="guide-list">
+                        <li>مقص أظافر خاص للقطط (لا تستخدم مقص البشر)</li>
+                        <li>مسحوق إيقاف النزيف (Styptic Powder) للطوارئ</li>
+                        <li>مكافآت صغيرة لتحفيز القطة</li>
+                    </ul>
+                    <h4>الخطوات</h4>
+                    <ol class="guide-list" style="list-style: decimal; padding-right: 20px;">
+                        <li>دع القطة تشم الأداة أولاً</li>
+                        <li>اضغط برفقاً على كفّها لإظهار المخلب</li>
+                        <li>قص الجزء الشفاف فقط — تجنب الجزء الوردي (Quick)</li>
+                        <li>إذا نزف المخلب، اضغط بمسحوق الإيقاف</li>
+                        <li>كافئ قطتك بعد كل مخلب</li>
+                    </ol>
+                    <div class="guide-warning"><i class="fas fa-info-circle"></i> كل 3-4 أسابيع هو الجدول المثالي لمعظم القطط المنزلية.</div>
+                </div>
+                <button type="button" class="guide-read-btn" onclick="toggleArticle('art8', this)" aria-expanded="false"><span>اقرأ المقال</span> <i class="fas fa-chevron-down"></i></button>
+            </div>
+        </article>
+
+    </div>
+
+    <div class="guide-empty" id="guideEmpty" style="display:none;" role="status">
+        <i class="fas fa-search" aria-hidden="true"></i>
+        <p>لا توجد نتائج مطابقة — جرّب كلمات أخرى أو أزل التصفية</p>
+    </div>
+
+    <section class="guide-refs">
+        <h2 class="guide-refs-title"><i class="fas fa-book-open" aria-hidden="true"></i> المراجع العلمية المعتمدة</h2>
+        <ol class="guide-refs-list">
+            <li>الجمعية الأمريكية لطب القطط (AAFP) — إرشادات التغذية والرعاية الصحية</li>
+            <li>الجمعية العالمية لطب القطط (WSAVA) — دليل التطعيمات 2022</li>
+            <li>الكلية الأمريكية للطب البيطري الداخلي (ACVIM) — التوصيات الغذائية</li>
+            <li>مجلة Applied Animal Behaviour Science — دراسات سلوك القطط</li>
+            <li>الجمعية الأمريكية للمستشفيات البيطرية (AAHA) — إرشادات العناية اليومية</li>
+        </ol>
+    </section>
+
+</main>
+
+<script>
+function toggleArticle(id, btn) {
+    const body = document.getElementById(id);
+    const isOpen = body.style.display !== 'none' && !body.hasAttribute('hidden');
+    if (isOpen) {
+        body.style.display = 'none';
+        body.setAttribute('hidden', '');
+        btn.innerHTML = '<span>اقرأ المقال</span> <i class="fas fa-chevron-down"></i>';
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+    } else {
+        body.style.display = 'block';
+        body.removeAttribute('hidden');
+        btn.innerHTML = '<span>إغلاق</span> <i class="fas fa-chevron-up"></i>';
+        btn.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+    }
+}
+
+function filterCat(cat, btn) {
+    document.querySelectorAll('.guide-cat').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.guide-card').forEach(card => {
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+    });
+    checkEmpty();
+}
+
+function filterCards() {
+    const q = document.getElementById('searchInput').value.trim().toLowerCase();
+    document.querySelectorAll('.guide-card').forEach(card => {
+        const title = card.dataset.title.toLowerCase();
+        const desc  = card.querySelector('.guide-card-desc').textContent.toLowerCase();
+        card.style.display = (!q || title.includes(q) || desc.includes(q)) ? '' : 'none';
+    });
+    checkEmpty();
+}
+
+function checkEmpty() {
+    const visible = [...document.querySelectorAll('.guide-card')].some(c => c.style.display !== 'none');
+    document.getElementById('guideEmpty').style.display = visible ? 'none' : 'block';
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('reveal-in');
+                obs.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.guide-card.reveal-ready').forEach(el => obs.observe(el));
+});
+</script>
+
+</body>
+</html>
